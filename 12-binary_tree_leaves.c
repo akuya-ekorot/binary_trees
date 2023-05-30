@@ -18,11 +18,11 @@ size_t binary_tree_leaves(const binary_tree_t *tree)
 	if (!(tree->left || tree->right))
 		return (1);
 
-	/* if tree has a left child, it's not a leaf. Recurse to find a leaf */
+	/* recurse if left */
 	if (tree->left)
 		left += binary_tree_leaves(tree->left);
 
-	/* if tree has a right child, it's not a leaf. Recurse to find a leaf */
+	/* recurse if right */
 	if (tree->right)
 		right += binary_tree_leaves(tree->right);
 
